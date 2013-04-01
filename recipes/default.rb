@@ -1,9 +1,7 @@
 include_recipe "chef_handler"
 
 # Install the hipchat notification gem
-gem_package "hipchat"
-
-Gem.clear_paths
+chef_gem "hipchat"
 
 hipchat_secrets = Chef::DataBagItem.load('secrets', 'hipchat')
 
