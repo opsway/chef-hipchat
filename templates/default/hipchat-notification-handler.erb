@@ -25,7 +25,7 @@ module HipChat
       msg = "Failure to run on #{node.name}: #{run_status.formatted_exception}"
 
       client = HipChat::Client.new(@api_token)
-      client[@room_name].send("chef-client", msg, :notify => @notify_users)
+      client[@room_name].send("chef-client", msg, {:notify => @notify_users, :color => 'red'})
     end
   end
 end
