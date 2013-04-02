@@ -1,5 +1,11 @@
-Opscode Chef HipChat exception handler
+Opscode Chef HipChat integration and Monit hipchat utility
 ============
+
+Includes two recipes:
+
+* default.rb - integration as Chef exception handler
+* command.rb - command line utility to send hipchat messages for Monit
+
 
 Reports failures with node.name and exception details to your HipChat room
 
@@ -23,3 +29,13 @@ Usage
       "api_token" : "2520f5f2f3d33cefb61c08asdfasdfasdf",
       "room_name" : "Main"
     }
+
+
+
+OR
+
+ include_recipe "hipchat::command"
+
+You can then use 
+
+    /usr/bin/hipchat "My test command"
