@@ -6,7 +6,7 @@ require 'hipchat'
 if ARGV.count != 1
   puts "Usage: hipchat \"message\""
   abort
-<% end -%>
+end
 
 client = HipChat::Client.new("<%= @api_token %>")
 client['<%= @room_name %>'].send('Monit', ARGV[0], :color => 'red')
