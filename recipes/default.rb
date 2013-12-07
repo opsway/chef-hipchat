@@ -1,3 +1,4 @@
+include_recipe "build-essential"
 include_recipe "chef_handler"
 
 # Install the hipchat notification gem

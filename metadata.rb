@@ -8,4 +8,4 @@ version          "0.2.0"
 
 depends "chef_handler"
 depends "ruby"
-
+depends "build-essential"
