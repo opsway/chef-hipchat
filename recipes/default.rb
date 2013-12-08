@@ -1,7 +1,11 @@
 include_recipe "build-essential"
 include_recipe "chef_handler"
 
-# Install the hipchat notification gem
+
+# We need httpart <0.12 as in 0.12 httparty depends on json 1.8 and this introduces conflict
+chef_gem "httparty" do
+  version "=0.11.0"
+end
 chef_gem "hipchat"
 
 hipchat_secrets = Chef::DataBagItem.load('secrets', 'hipchat')
