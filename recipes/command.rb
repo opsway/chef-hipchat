@@ -1,6 +1,6 @@
 #Install /usr/bin script that takes message as a parameter and sends it to HipChat room
 
-include_recipe "hipchat"
+include_recipe "chef-hipchat"
 include_recipe "ruby"
 
 # Install the hipchat notification gem
